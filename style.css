@@ -94,7 +94,7 @@ li button:hover{
   cursor: pointer;
   display: inline-block;
   font-family: 'Poppins';
-  font-size: 1.2vw; 
+  font-size: 15px; 
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
