@@ -83,34 +83,59 @@ li button:hover{
 }
 .button {
   width: 20vw;
+  min-width: 150px; 
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  color: #000;
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 30px;
   margin-top: 15px;
   cursor: pointer;
   display: inline-block;
-  font-family: 'poppins';
-  font-size: 2vw;
+  font-family: 'Poppins';
+  font-size: 1.2vw; 
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
 }
+
 
 .button-1 {
   background-color: transparent;
-  border: 3px solid #00eaff;
+  border: 3px solid #2d6ba7;
   border-radius: 50px;
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
-  color: #00eaff;
+  color: #2d6ba7;
 }
+
+
+.button-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  width: 100%;
+  height: 100%;
+  background: #2d6ba7;
+  transition: all 0.5s;
+  
+}
+
 .button-1:hover {
-  box-shadow: 0 0 10px 0 #00eaff inset, 0 0 20px 2px #00eaff;
-  border: 3px solid #00eaff;
+  color: #ffffff;
+  background-color: #2d6ba7;
+  transform: translateY(-3px); 
 }
-#bttn:hover{
-    transform: scale(1.1);
+
+.button-1:hover::before {
+  left: 100%; 
+}
+
+
+.button-1:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 10px #2d6ba7;
 }
 #list{
     background-color: rgb(226, 226, 226);
