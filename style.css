@@ -127,15 +127,34 @@ li button:hover{
   background-color: #2d6ba7;
   transform: translateY(-3px); 
 }
-
 .button-1:hover::before {
   left: 100%; 
 }
-
-
 .button-1:active {
   transform: translateY(1px);
   box-shadow: 0 0 10px #2d6ba7;
+}
+@media (max-width:1000px){
+    .button-1:active{
+        transform: none;
+        box-shadow: none;
+    }
+    .button-1:hover {
+        transform: none;
+        background-color: transparent;
+        border: 3px solid #2d6ba7;
+        border-radius: 50px;
+        color: #2d6ba7;
+}
+    .button-1:hover::before {
+        left: 0%; 
+         background: transparent;
+}
+    .button-1::before {
+        transition: none;
+        left: 100%;
+  
+}
 }
 #list{
     background-color: rgb(226, 226, 226);
